@@ -1,4 +1,8 @@
-import React, { useEffect } from 'react';
+/**************Results*********************/
+import React, { useEffect,useContext } from 'react';
+
+import {LoginContext} from '../../App.js';
+
 import { Typography, Button, Container, CircularProgress } from '@material-ui/core';
 import queryString from 'query-string';
 
@@ -10,6 +14,9 @@ import Layout from '../../components/layout/index';
 import styles from './style';
 
 export default ({ history, location }) => {
+	
+	const {reg,login} = useContext(LoginContext);	
+	
   const movies = useSelector(state => movieResults(state));
   const isLoading = useSelector(state => isSearchingLoading(state));
   const dispatch = useDispatch();
@@ -44,6 +51,7 @@ export default ({ history, location }) => {
 
   return (
     <Layout>
+	<div><span style={{fontSize:20,fontWeight:'bold',position:'relative',left: 100, marginBottom:100}}> Enjoy!! </span><span style={{fontSize:20,fontWeight:'bold',position:'relative',left: 100, marginBottom:100}}>{login}</span></div>
     <Container>
       {renderMovies()}
     </Container>
