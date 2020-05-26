@@ -54,7 +54,7 @@ export default ({ history }) => {
                             className={classes.searchButton}
                             size="large"
                         >
-                            Entrar
+                            Login
                 </Button>
                 </Grid>
             </Container>
