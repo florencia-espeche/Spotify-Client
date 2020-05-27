@@ -23,9 +23,11 @@ export default ({ history }) => {
     };
 
     const handleSearchClick = event => {
-	reg(searchText);
-	history.push('/home');
-    };
+		if(searchText){
+			reg(searchText);
+			history.push('/home');
+    }
+	}
 
     const classes = styles();
 
@@ -37,7 +39,7 @@ export default ({ history }) => {
                         <Grid>
                             <p className={classes.text}>Welcome to</p>
                             <Typography className={classes.title}>Movies search</Typography>
-                            <p className={classes.text}>Enter your name in the following box and enjoy!</p>
+                            <p className={classes.text}>Enter your name in the following box</p>
                         </Grid>
                     </Grid>
                         <TextField

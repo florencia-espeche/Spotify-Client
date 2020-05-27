@@ -51,7 +51,7 @@ export default ({ history, location }) => {
 
   return (
     <Layout>
-	<div><span style={{fontSize:20,fontWeight:'bold',position:'relative',left: 100, marginBottom:100}}> Enjoy!! </span><span style={{fontSize:20,fontWeight:'bold',position:'relative',left: 100, marginBottom:100}}>{login}</span></div>
+	<div><span style={{fontSize:20,fontWeight:'bold',position:'relative',left: 100, marginBottom:100}}> Enjoy!! </span><span style={{fontSize:40,fontWeight:'bold',position:'relative',left: 120, Bottom:200}}>{login}</span></div>
     <Container>
       {renderMovies()}
     </Container>
